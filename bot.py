@@ -3,6 +3,7 @@ import discord
 import requests
 import json
 import random
+import os
 
 
 intents = discord.Intents.default()
@@ -38,4 +39,4 @@ async def on_message(message):
 async def on_ready():
     print(f'We have logged in as {client.user}')
 
-client.run('MTE5NjQzMzE1MDM3NzczODI4MA.G-h8aZ.IAkDPYBjgDjO1mtcdEoZPnszOAlF4E6xHp5VFw')
+client.run(os.getenv('TOKEN')
